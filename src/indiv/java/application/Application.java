@@ -17,7 +17,7 @@ public class Application {
             System.out.println("\t4.通过学号查看学生信息");
             System.out.println("\t5.显示所有学生");
             System.out.println("\t6.退出");
-            System.out.println("\t请输入操作：");
+            System.out.println("请输入操作：");
             int choice = scanner.nextInt();
             switch (choice){
                 case 1:
