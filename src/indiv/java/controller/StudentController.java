@@ -46,7 +46,27 @@ public class StudentController {
         }
     }
 
+    //根据学号修改学生信息
     public void updateStudent() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入待修改的学生学号：");
+        String studentId = scanner.nextLine();
+        if (studentService.isExist(studentId)){
+
+            System.out.println("请输入姓名：");
+            String studentName = scanner.nextLine();
+            System.out.println("请输入学生年龄：");
+            int studentAge = scanner.nextInt();
+
+            //封装数据
+            Student student = new Student(studentId,studentName,studentAge);
+
+            if (studentService.updateStudent(studentId,student)){
+                System.out.println(studentId+"修改成功！");
+            }
+        }else {
+            System.out.println(studentId+"不存在！");
+        }
     }
 
     public void findStudent() {

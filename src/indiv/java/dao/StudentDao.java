@@ -32,4 +32,16 @@ public class StudentDao {
         }
         return false;
     }
+
+    public boolean updateStudent(String studentId,Student student) {
+        //获取下标
+        int index =0;
+        for (Student student1 : students){
+            if (student1.getId().equalsIgnoreCase(studentId)){
+                index = students.indexOf(student1);
+            }
+        }
+        students.set(index,student);
+        return true;
+    }
 }

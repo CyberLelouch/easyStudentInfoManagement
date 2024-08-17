@@ -17,4 +17,8 @@ public class StudentService {
     public boolean deleteStudent(String studentId) {
         return studentDao.deleteStudent(studentId);
     }
+
+    public boolean updateStudent(String studentId,Student student) {
+        return studentDao.updateStudent(studentId,student);
+    }
 }
