@@ -22,18 +22,23 @@ public class Application {
             switch (choice){
                 case 1:
                     //添加学生
+                    studentController.addStudent();
                     break;
                 case 2:
                     //删除学生
+                    studentController.deleteStudent();
                     break;
                 case 3:
                     //通过学号更新学生信息
+                    studentController.updateStudent();
                     break;
                 case 4:
                     //通过学号查看学生信息
+                    studentController.findStudent();
                     break;
                 case 5:
                     //显示所有学生信息
+                    studentController.showAllStudentInfo();
                     break;
                 case 6:
                     //退出
