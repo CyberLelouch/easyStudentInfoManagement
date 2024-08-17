@@ -44,4 +44,17 @@ public class StudentDao {
         students.set(index,student);
         return true;
     }
+
+    public Student findStudent(String studentId) {
+        for (Student student : students){
+            if (student.getId().equalsIgnoreCase(studentId)){
+                return student;
+            }
+        }
+        return null;
+    }
+
+    public ArrayList<Student> allStudentInfo() {
+        return students;
+    }
 }
