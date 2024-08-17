@@ -10,16 +10,14 @@ public class Application {
         //创建StudentController对象
         StudentController studentController = new StudentController();
         System.out.println("++++欢迎来到教务管理系统++++");
-        System.out.println();
-        System.out.println();
         while (true){
-            System.out.println("\t请输入操作：");
             System.out.println("\t1.添加学生");
             System.out.println("\t2.删除学生");
             System.out.println("\t3.通过学号更新学生信息");
             System.out.println("\t4.通过学号查看学生信息");
             System.out.println("\t5.显示所有学生");
             System.out.println("\t6.退出");
+            System.out.println("\t请输入操作：");
             int choice = scanner.nextInt();
             switch (choice){
                 case 1:
