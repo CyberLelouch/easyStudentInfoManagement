@@ -11,6 +11,7 @@ public class Application {
         StudentController studentController = new StudentController();
         System.out.println("++++欢迎来到教务管理系统++++");
         while (true){
+            System.out.println("--------------------------");
             System.out.println("\t1.添加学生");
             System.out.println("\t2.删除学生");
             System.out.println("\t3.通过学号更新学生信息");
