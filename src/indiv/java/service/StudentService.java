@@ -6,11 +6,15 @@ import indiv.java.entity.Student;
 public class StudentService {
     StudentDao studentDao = new StudentDao();
     //判断学生是否在数据库中
-    public boolean isExist(Student student){
-        return studentDao.isExist(student);
+    public boolean isExist(String studentId){
+        return studentDao.isExist(studentId);
     }
     //添加学生
     public boolean addStudent(Student student){
         return studentDao.addStudent(student);
+    }
+
+    public boolean deleteStudent(String studentId) {
+        return studentDao.deleteStudent(studentId);
     }
 }

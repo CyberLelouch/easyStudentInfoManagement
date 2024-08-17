@@ -19,7 +19,7 @@ public class StudentController {
         //封装数据
         Student student = new Student(studentId,studentName,studentAge);
         //如何待添加学生不存在，添加
-        if ( ! studentService.isExist(student)){
+        if ( ! studentService.isExist(studentId)){
             if (studentService.addStudent(student)){
                 System.out.println(student.getId()+"添加成功");
             }else {
@@ -30,7 +30,20 @@ public class StudentController {
         }
     }
 
+    //通过学号删除学生
     public void deleteStudent() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入待删除的学生学号：");
+        String studentId = scanner.nextLine();
+        if (studentService.isExist(studentId)){
+            if (studentService.deleteStudent(studentId)){
+                System.out.println(studentId+"删除成功！");
+            }else {
+                System.out.println("删除失败");
+            }
+        }else {
+            System.out.println("删除失败，"+studentId+"不存在。");
+        }
     }
 
     public void updateStudent() {
